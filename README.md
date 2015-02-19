@@ -1,11 +1,14 @@
-## Dockerfiles for Java JDK/JRE/SERVER-JRE 8u00/8u05/8u11/8u20/8u25/8u31
+## Dockerfiles for Oracle Java 8
+
+jdk+jre+server-jre 8u00+8u05+8u11+8u20+8u25+8u31
 
 
-**Dockerfiles** for [Java](http://www.oracle.com/technetwork/java/index.html) for Docker Trusted Builds.
+**Dockerfiles** for [Oracle Java 8](http://www.oracle.com/technetwork/java/index.html)
+for Docker Automated/Trusted Builds.
 
 ### GitHub Repository
 
-* [java-8](https://github.com/lwieske/dockerfiles-java-8)
+* [dockerfiles-java-8](https://github.com/lwieske/dockerfiles-java-8)
 
 ### Dependencies
 
@@ -20,3 +23,7 @@
     docker run -i -t lwieske/java-8 bash
 
     $ java -version
+
+### Vagrantfile
+
+The Vagrantfile can be used for local builds (development/test).
