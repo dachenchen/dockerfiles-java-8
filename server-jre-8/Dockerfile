@@ -13,7 +13,7 @@ RUN tar xfz server-jre-8-linux-x64.tar.gz -C /opt/server-jre-8
 RUN yum remove -y tar
 
 RUN alternatives --install /usr/bin/java java /opt/server-jre-8/bin/java 1
-RUN alternatives --install /usr/bin/jar  jar  /opt/server-jre-8/bin/jar 1
+RUN alternatives --install /usr/bin/jar  jar  /opt/server-jre-8/bin/jar  1
 
 RUN rm server-jre-8-linux-x64.tar.gz
 

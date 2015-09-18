@@ -24,6 +24,6 @@ for Docker Automated/Trusted Builds.
 
     $ java -version
 
-### Vagrantfile
+### Automation
 
-The Vagrantfile can be used for local builds (development/test).
+The __gen.sh__ script may be used to generate folders and files.
