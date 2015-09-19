@@ -10,8 +10,6 @@ RUN curl --insecure --junk-session-cookies --location --remote-name --silent --h
 RUN mkdir /opt/server-jre-8u31
 RUN tar xfz server-jre-8u31-linux-x64.tar.gz -C /opt/server-jre-8u31
 
-RUN yum remove -y tar
-
 RUN alternatives --install /usr/bin/java java /opt/server-jre-8u31/bin/java 1
 RUN alternatives --install /usr/bin/jar  jar  /opt/server-jre-8u31/bin/jar  1
 
