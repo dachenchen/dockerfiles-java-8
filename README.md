@@ -9,14 +9,30 @@ on [Centos](https://registry.hub.docker.com/_/centos/) for Docker Automated/Trus
 
     $ java -version
 
-### Current 8u60
+### Current 8u66
 
 | Image                     | Badge | Build Details |
 | ------------------------- | ----- | ------------- |
-| lwieske/java-8 | [![](https://badge.imagelayers.io/lwieske/java-8.svg)](https://imagelayers.io/?images=lwieske/java-8) | [bdmlbqrv22wliqdneqtdesf](https://hub.docker.com/r/lwieske/java-8/builds/bdmlbqrv22wliqdneqtdesf/) |
-| lwieske/java-8:jdk-8u66 | [![](https://badge.imagelayers.io/lwieske/java-8:jdk-8u60.svg)](https://imagelayers.io/?images=lwieske/java-8:jdk-8u60) | [baxh63a4z5ugnax4s2pduud](https://hub.docker.com/r/lwieske/java-8/builds/baxh63a4z5ugnax4s2pduud/) |
-| lwieske/java-8:jre-8u66 | [![](https://badge.imagelayers.io/lwieske/java-8:jre-8u60.svg)](https://imagelayers.io/?images=lwieske/java-8:jre-8u60) | [bhedcyueduu9rvkdg4ws83b](https://hub.docker.com/r/lwieske/java-8/builds/bhedcyueduu9rvkdg4ws83b/) |
-| lwieske/java-8:server-jre-8u66 | [![](https://badge.imagelayers.io/lwieske/java-8:server-jre-8u60.svg)](https://imagelayers.io/?images=lwieske/java-8:server-jre-8u60) | [b49tsxpum7fnmnxjtcbcxy7](https://hub.docker.com/r/lwieske/java-8/builds/b49tsxpum7fnmnxjtcbcxy7/) |
+| lwieske/java-8 | [![](https://badge.imagelayers.io/lwieske/java-8.svg)](https://imagelayers.io/?images=lwieske/java-8) | [bb7zp6habd9jgkj3c44ny4gj](https://hub.docker.com/r/lwieske/java-8/builds/b7zp6habd9jgkj3c44ny4gj/) |
+| lwieske/java-8:jdk-8u66 | [![](https://badge.imagelayers.io/lwieske/java-8:jdk-8u66.svg)](https://imagelayers.io/?images=lwieske/java-8:jdk-8u66) | [b6tazj3sz5ncew62ghypldh](https://hub.docker.com/r/lwieske/java-8/builds/b6tazj3sz5ncew62ghypldh/) |
+| lwieske/java-8:jre-8u66 | [![](https://badge.imagelayers.io/lwieske/java-8:jre-8u66.svg)](https://imagelayers.io/?images=lwieske/java-8:jre-8u66) | [byi2wvjdjbfuv8drdqqa7b4](https://hub.docker.com/r/lwieske/java-8/builds/byi2wvjdjbfuv8drdqqa7b4/) |
+| lwieske/java-8:server-jre-8u66 | [![](https://badge.imagelayers.io/lwieske/java-8:server-jre-8u66.svg)](https://imagelayers.io/?images=lwieske/java-8:server-jre-8u66) | [b3gwfuwgqxlcjjaavnxjjd](https://hub.docker.com/r/lwieske/java-8/builds/b3gwfuwgqxlcjjaavnxjjd/) |
+
+#### 8u65
+
+| Image                     | Badge |
+| ------------------------- | ----- |
+| lwieske/java-8:jdk-8u65 | [![](https://badge.imagelayers.io/lwieske/java-8:jdk-8u65.svg)](https://imagelayers.io/?images=lwieske/java-8:jdk-8u65) |
+| lwieske/java-8:jre-8u65 | [![](https://badge.imagelayers.io/lwieske/java-8:jre-8u65.svg)](https://imagelayers.io/?images=lwieske/java-8:jre-8u65) |
+| lwieske/java-8:server-jre-8u65 | [![](https://badge.imagelayers.io/lwieske/java-8:server-jre-8u65.svg)](https://imagelayers.io/?images=lwieske/java-8:server-jre-8u65) |
+
+#### 8u60
+
+| Image                     | Badge |
+| ------------------------- | ----- |
+| lwieske/java-8:jdk-8u60 | [![](https://badge.imagelayers.io/lwieske/java-8:jdk-8u60.svg)](https://imagelayers.io/?images=lwieske/java-8:jdk-8u60) |
+| lwieske/java-8:jre-8u60 | [![](https://badge.imagelayers.io/lwieske/java-8:jre-8u60.svg)](https://imagelayers.io/?images=lwieske/java-8:jre-8u60) |
+| lwieske/java-8:server-jre-8u60 | [![](https://badge.imagelayers.io/lwieske/java-8:server-jre-8u60.svg)](https://imagelayers.io/?images=lwieske/java-8:server-jre-8u60) |
 
 #### 8u51
 
@@ -92,4 +108,6 @@ on [Centos](https://registry.hub.docker.com/_/centos/) for Docker Automated/Trus
 
 ### Automation
 
-The __gen.sh__ script may be used to generate folders and files.
+The __generate.sh__ script may be used to generate folders and files.
+
+The __trigger.sh__ script may be used to trigger builds.
