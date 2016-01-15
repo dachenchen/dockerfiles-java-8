@@ -1,0 +1,10 @@
+FROM centos
+
+MAINTAINER Lothar Wieske <lothar.wieske@gmail.com>
+
+RUN yum update -y && \
+    curl --insecure --junk-session-cookies --location --remote-name --silent --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u40-b26/jdk-8u40-linux-x64.rpm && \
+    yum localinstall -y jdk-8u40-linux-x64.rpm && \
+    rm jdk-8u40-linux-x64.rpm
+
+ENV JAVA_HOME=/usr/java/default

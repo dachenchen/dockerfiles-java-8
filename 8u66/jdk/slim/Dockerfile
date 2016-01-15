@@ -1,0 +1,52 @@
+FROM alpine:3.3
+
+MAINTAINER Lothar Wieske <lothar.wieske@gmail.com>
+
+RUN cd /tmp                                                              && \
+    apk add --no-cache --virtual=build-dependencies ca-certificates wget && \
+    export GLIBC_VERSION="2.21-r2"                                  && \
+    export JAVA_PACKAGE="jdk"                                    && \
+    export JAVA_UPDATE="66"                                      && \
+    export JAVA_BUILD="17"                                        && \
+    export GLIBC_URL="https://circle-artifacts.com/gh/andyshinn/alpine-pkg-glibc/6/artifacts/0/home/ubuntu/alpine-pkg-glibc/packages/x86_64" && \
+    export GLIBC_APK="glibc-${GLIBC_VERSION}.apk"                        && \
+    export GLIBC_BIN_APK="glibc-bin-${GLIBC_VERSION}.apk"                && \
+    export JAVA_URL="http://download.oracle.com/otn-pub/java/jdk/8u${JAVA_UPDATE}-b${JAVA_BUILD}" && \
+    export JAVA_TGZ="${JAVA_PACKAGE}-8u${JAVA_UPDATE}-linux-x64.tar.gz"  && \
+    export JAVA_HOME="/usr/lib/jvm/default-jvm"                          && \
+    wget -q ${GLIBC_URL}/${GLIBC_APK}                                    && \
+    wget -q ${GLIBC_URL}/${GLIBC_BIN_APK}                                && \
+    apk add --no-cache --allow-untrusted ${GLIBC_APK}                    && \
+    apk add --no-cache --allow-untrusted ${GLIBC_BIN_APK}                && \
+    /usr/glibc/usr/bin/ldconfig /lib /usr/glibc/usr/lib                  && \
+    echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf && \
+    mkdir -p /usr/lib/jvm                                                && \
+    wget -qO- --header "Cookie: oraclelicense=accept-securebackup-cookie;" ${JAVA_URL}/${JAVA_TGZ} | tar -xzf -  && \
+    mv /tmp/j* /usr/lib/jvm/java-8-oracle                                && \
+    ln -s java-8-oracle $JAVA_HOME                                       && \
+    ln -s $JAVA_HOME/bin/* /usr/bin/                                     && \
+    rm -rf $JAVA_HOME/*src.zip                                           && \
+    rm -rf "$JAVA_HOME/lib/missioncontrol" \
+               "$JAVA_HOME/lib/visualvm" \
+               "$JAVA_HOME/lib/"*javafx* \
+               "$JAVA_HOME/jre/lib/plugin.jar" \
+               "$JAVA_HOME/jre/lib/ext/jfxrt.jar" \
+               "$JAVA_HOME/jre/bin/javaws" \
+               "$JAVA_HOME/jre/lib/javaws.jar" \
+               "$JAVA_HOME/jre/lib/desktop" \
+               "$JAVA_HOME/jre/plugin" \
+               "$JAVA_HOME/jre/lib/"deploy* \
+               "$JAVA_HOME/jre/lib/"*javafx* \
+               "$JAVA_HOME/jre/lib/"*jfx* \
+               "$JAVA_HOME/jre/lib/amd64/libdecora_sse.so" \
+               "$JAVA_HOME/jre/lib/amd64/"libprism_*.so \
+               "$JAVA_HOME/jre/lib/amd64/libfxplugins.so" \
+               "$JAVA_HOME/jre/lib/amd64/libglass.so" \
+               "$JAVA_HOME/jre/lib/amd64/libgstreamer-lite.so" \
+               "$JAVA_HOME/jre/lib/amd64/"libjavafx*.so \
+               "$JAVA_HOME/jre/lib/amd64/"libjfx*.so                     && \
+    apk del build-dependencies                                           && \
+    rm /tmp/*
+
+ENV JAVA_HOME=${JAVA_HOME} \
+    PATH=${PATH}:${JAVA_HOME}/bin

@@ -2,11 +2,9 @@ FROM centos
 
 MAINTAINER Lothar Wieske <lothar.wieske@gmail.com>
 
-RUN yum update -y
+RUN yum update -y && \
+    curl --insecure --junk-session-cookies --location --remote-name --silent --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8uUPDATE-bBUILD/jre-8uUPDATE-linux-x64.rpm && \
+    yum localinstall -y jre-8uUPDATE-linux-x64.rpm && \
+    rm jre-8uUPDATE-linux-x64.rpm
 
-RUN curl --insecure --junk-session-cookies --location --remote-name --silent --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8UPDATE-bBUILD/jre-8UPDATE-linux-x64.rpm
-
-RUN yum localinstall -y jre-8UPDATE-linux-x64.rpm
-RUN rm jre-8UPDATE-linux-x64.rpm
-
-ENV JAVA_HOME /usr/java/default
+ENV JAVA_HOME=/usr/java/default
