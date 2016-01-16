@@ -22,31 +22,84 @@ RUN cd /tmp                                                              && \
     echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf && \
     mkdir -p /usr/lib/jvm                                                && \
     wget -qO- --header "Cookie: oraclelicense=accept-securebackup-cookie;" ${JAVA_URL}/${JAVA_TGZ} | tar -xzf -  && \
-    mv /tmp/j* /usr/lib/jvm/java-8-oracle                                && \
+    if [ ${JAVA_PACKAGE} = "server-jre" ]; then mv jdk*/jre /usr/lib/jvm/java-8-oracle; else mv j* /usr/lib/jvm/java-8-oracle; fi && \
     ln -s java-8-oracle $JAVA_HOME                                       && \
-    ln -s $JAVA_HOME/bin/* /usr/bin/                                     && \
     rm -rf $JAVA_HOME/*src.zip                                           && \
-    rm -rf "$JAVA_HOME/lib/missioncontrol" \
-               "$JAVA_HOME/lib/visualvm" \
-               "$JAVA_HOME/lib/"*javafx* \
-               "$JAVA_HOME/jre/lib/plugin.jar" \
-               "$JAVA_HOME/jre/lib/ext/jfxrt.jar" \
-               "$JAVA_HOME/jre/bin/javaws" \
-               "$JAVA_HOME/jre/lib/javaws.jar" \
-               "$JAVA_HOME/jre/lib/desktop" \
-               "$JAVA_HOME/jre/plugin" \
-               "$JAVA_HOME/jre/lib/"deploy* \
-               "$JAVA_HOME/jre/lib/"*javafx* \
-               "$JAVA_HOME/jre/lib/"*jfx* \
-               "$JAVA_HOME/jre/lib/amd64/libdecora_sse.so" \
-               "$JAVA_HOME/jre/lib/amd64/"libprism_*.so \
-               "$JAVA_HOME/jre/lib/amd64/libfxplugins.so" \
-               "$JAVA_HOME/jre/lib/amd64/libglass.so" \
-               "$JAVA_HOME/jre/lib/amd64/libgstreamer-lite.so" \
-               "$JAVA_HOME/jre/lib/amd64/"libjavafx*.so \
-               "$JAVA_HOME/jre/lib/amd64/"libjfx*.so                     && \
+    rm -rf \
+            ${JAVA_HOME}/*/javaws \
+            ${JAVA_HOME}/*/jjs \
+            ${JAVA_HOME}/*/keytool \
+            ${JAVA_HOME}/*/orbd \
+            ${JAVA_HOME}/*/pack200 \
+            ${JAVA_HOME}/*/policytool \
+            ${JAVA_HOME}/*/rmid \
+            ${JAVA_HOME}/*/rmiregistry \
+            ${JAVA_HOME}/*/servertool \
+            ${JAVA_HOME}/*/tnameserv \
+            ${JAVA_HOME}/*/unpack200 \
+            ${JAVA_HOME}/*/*javafx* \
+            ${JAVA_HOME}/*/*jfx* \
+            ${JAVA_HOME}/*/amd64/libdecora_sse.so \
+            ${JAVA_HOME}/*/amd64/libfxplugins.so \
+            ${JAVA_HOME}/*/amd64/libglass.so \
+            ${JAVA_HOME}/*/amd64/libgstreamer-lite.so \
+            ${JAVA_HOME}/*/amd64/libjavafx*.so \
+            ${JAVA_HOME}/*/amd64/libjfx*.so \
+            ${JAVA_HOME}/*/amd64/libprism_*.so \
+            ${JAVA_HOME}/*/deploy* \
+            ${JAVA_HOME}/*/desktop \
+            ${JAVA_HOME}/*/ext/jfxrt.jar \
+            ${JAVA_HOME}/*/ext/nashorn.jar \
+            ${JAVA_HOME}/*/javaws.jar \
+            ${JAVA_HOME}/*/jfr \
+            ${JAVA_HOME}/*/jfr \
+            ${JAVA_HOME}/*/jfr.jar \
+            ${JAVA_HOME}/*/missioncontrol \
+            ${JAVA_HOME}/*/oblique-fonts \
+            ${JAVA_HOME}/*/plugin.jar \
+            ${JAVA_HOME}/*/visualvm \
+            ${JAVA_HOME}/man \
+            ${JAVA_HOME}/plugin \
+            ${JAVA_HOME}/*.txt \
+            ${JAVA_HOME}/*/*/javaws \
+            ${JAVA_HOME}/*/*/jjs \
+            ${JAVA_HOME}/*/*/keytool \
+            ${JAVA_HOME}/*/*/orbd \
+            ${JAVA_HOME}/*/*/pack200 \
+            ${JAVA_HOME}/*/*/policytool \
+            ${JAVA_HOME}/*/*/rmid \
+            ${JAVA_HOME}/*/*/rmiregistry \
+            ${JAVA_HOME}/*/*/servertool \
+            ${JAVA_HOME}/*/*/tnameserv \
+            ${JAVA_HOME}/*/*/unpack200 \
+            ${JAVA_HOME}/*/*/*javafx* \
+            ${JAVA_HOME}/*/*/*jfx* \
+            ${JAVA_HOME}/*/*/amd64/libdecora_sse.so \
+            ${JAVA_HOME}/*/*/amd64/libfxplugins.so \
+            ${JAVA_HOME}/*/*/amd64/libglass.so \
+            ${JAVA_HOME}/*/*/amd64/libgstreamer-lite.so \
+            ${JAVA_HOME}/*/*/amd64/libjavafx*.so \
+            ${JAVA_HOME}/*/*/amd64/libjfx*.so \
+            ${JAVA_HOME}/*/*/amd64/libprism_*.so \
+            ${JAVA_HOME}/*/*/deploy* \
+            ${JAVA_HOME}/*/*/desktop \
+            ${JAVA_HOME}/*/*/ext/jfxrt.jar \
+            ${JAVA_HOME}/*/*/ext/nashorn.jar \
+            ${JAVA_HOME}/*/*/javaws.jar \
+            ${JAVA_HOME}/*/*/jfr \
+            ${JAVA_HOME}/*/*/jfr \
+            ${JAVA_HOME}/*/*/jfr.jar \
+            ${JAVA_HOME}/*/*/missioncontrol \
+            ${JAVA_HOME}/*/*/oblique-fonts \
+            ${JAVA_HOME}/*/*/plugin.jar \
+            ${JAVA_HOME}/*/*/visualvm \
+            ${JAVA_HOME}/*/man \
+            ${JAVA_HOME}/*/plugin \
+            ${JAVA_HOME}/*.txt \
+                                                                         && \
     apk del build-dependencies                                           && \
-    rm /tmp/*
+    ln -s $JAVA_HOME/bin/* /usr/bin/                                     && \
+    rm -rf /tmp/*
 
 ENV JAVA_HOME=${JAVA_HOME} \
     PATH=${PATH}:${JAVA_HOME}/bin

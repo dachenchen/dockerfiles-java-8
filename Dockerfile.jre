@@ -7,4 +7,6 @@ RUN yum update -y && \
     yum localinstall -y jre-8uUPDATE-linux-x64.rpm && \
     rm jre-8uUPDATE-linux-x64.rpm
 
-ENV JAVA_HOME=/usr/java/default
+ENV JAVA_HOME=/usr/java/default \
+    LANG=en_US.UTF-8 \
+    LC_ALL=en_US.UTF-8
