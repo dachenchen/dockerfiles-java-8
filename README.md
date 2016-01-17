@@ -1,7 +1,8 @@
 ## Dockerfiles for Oracle Java 8 [![Docker Hub](https://img.shields.io/docker/pulls/lwieske/java-8.svg?style=flat)](https://registry.hub.docker.com/u/lwieske/java-8/) [![Docker Hub](https://img.shields.io/docker/stars/lwieske/java-8.svg?style=flat)](https://registry.hub.docker.com/u/lwieske/java-8/)
 
 **Dockerfiles** for [Oracle Java 8](http://www.oracle.com/technetwork/java/index.html) on [Alpine](https://registry.hub.docker.com/_/alpine/) and [Centos](https://registry.hub.docker.com/_/centos/) for Docker Automated/Trusted Builds.
-** Using the image, you accept the [Oracle Binary Code License Agreement](http://www.oracle.com/technetwork/java/javase/terms/license/index.html) for Java SE. **
+
+**Using the image, you accept the [Oracle Binary Code License Agreement](http://www.oracle.com/technetwork/java/javase/terms/license/index.html) for Java SE.**
 
 [![](https://badge.imagelayers.io/lwieske/java-8:jdk-8u66-slim.svg)](https://imagelayers.io/?images=lwieske/java-8:jdk-8u66-slim) lwieske/java-8:jdk-8u66-slim
 
