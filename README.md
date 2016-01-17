@@ -4,6 +4,7 @@
 ** Using the image, you accept the [Oracle Binary Code License Agreement](http://www.oracle.com/technetwork/java/javase/terms/license/index.html) for Java SE. **
 
 [![](https://badge.imagelayers.io/lwieske/java-8:jdk-8u66-slim.svg)](https://imagelayers.io/?images=lwieske/java-8:jdk-8u66-slim) lwieske/java-8:jdk-8u66-slim
+
 [![](https://badge.imagelayers.io/lwieske/java-8:server-jre-8u66-slim.svg)](https://imagelayers.io/?images=lwieske/java-8:server-jre-8u66-slim) lwieske/java-8:server-jre-8u66-slim
 
 ```
