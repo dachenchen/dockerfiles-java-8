@@ -8,7 +8,8 @@ RUN yum update -y && \
     tar xfz server-jre-8u40-linux-x64.tar.gz -C /usr/java/default && \
     alternatives --install /usr/bin/java java /usr/java/default/jdk1.8.0_40/bin/java 1 && \
     alternatives --install /usr/bin/jar  jar  /usr/java/default/jdk1.8.0_40/bin/jar  1 && \
-    rm server-jre-8u40-linux-x64.tar.gz
+    rm server-jre-8u40-linux-x64.tar.gz \
+    && yum clean all
 
 ENV JAVA_HOME=/usr/java/default \
     LANG=en_US.UTF-8 \
