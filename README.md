@@ -4,9 +4,9 @@
 
 **Using the image, you accept the [Oracle Binary Code License Agreement](http://www.oracle.com/technetwork/java/javase/terms/license/index.html) for Java SE.**
 
-[![](https://badge.imagelayers.io/lwieske/java-8:jdk-8u66-slim.svg)](https://imagelayers.io/?images=lwieske/java-8:jdk-8u66-slim) lwieske/java-8:jdk-8u66-slim
+[![](https://badge.imagelayers.io/lwieske/java-8:jdk-8u72-slim.svg)](https://imagelayers.io/?images=lwieske/java-8:jdk-8u72-slim) lwieske/java-8:jdk-8u72-slim
 
-[![](https://badge.imagelayers.io/lwieske/java-8:server-jre-8u66-slim.svg)](https://imagelayers.io/?images=lwieske/java-8:server-jre-8u66-slim) lwieske/java-8:server-jre-8u66-slim
+[![](https://badge.imagelayers.io/lwieske/java-8:server-jre-8u72-slim.svg)](https://imagelayers.io/?images=lwieske/java-8:server-jre-8u72-slim) lwieske/java-8:server-jre-8u72-slim
 
 ```
 docker run -i -t lwieske/java-8 java -version
@@ -14,17 +14,39 @@ docker run -i -t lwieske/java-8 java -version
 
 ***
 
-#### 8u66
+#### 8u72
 
 | Image                     | Badge | Build Details |
 | ------------------------- | ----- | ------------- |
 | lwieske/java-8:latest | [![](https://badge.imagelayers.io/lwieske/java-8:latest.svg)](https://imagelayers.io/?images=lwieske/java-8:latest) | [bftq4gjxml9a3rwmpyhglbe](https://hub.docker.com/r/lwieske/java-8/builds/bftq4gjxml9a3rwmpyhglbe/) |
-| lwieske/java-8:jdk-8u66 | [![](https://badge.imagelayers.io/lwieske/java-8:jdk-8u66.svg)](https://imagelayers.io/?images=lwieske/java-8:jdk-8u66) | [bhvnwcizr2ns6zvrjm2mwfr](https://hub.docker.com/r/lwieske/java-8/builds/bhvnwcizr2ns6zvrjm2mwfr/) |
-| lwieske/java-8:jdk-8u66-slim | [![](https://badge.imagelayers.io/lwieske/java-8:jdk-8u66-slim.svg)](https://imagelayers.io/?images=lwieske/java-8:jdk-8u66-slim) | [btutqkeuvnxvdvdsruau2ux](https://hub.docker.com/r/lwieske/java-8/builds/btutqkeuvnxvdvdsruau2ux/) |
-| lwieske/java-8:jre-8u66 | [![](https://badge.imagelayers.io/lwieske/java-8:jre-8u66.svg)](https://imagelayers.io/?images=lwieske/java-8:jre-8u66) | [bgg45nbtg3qnexgdtjtqej5](https://hub.docker.com/r/lwieske/java-8/builds/bgg45nbtg3qnexgdtjtqej5/) |
-| lwieske/java-8:jre-8u66-slim | [![](https://badge.imagelayers.io/lwieske/java-8:jre-8u66-slim.svg)](https://imagelayers.io/?images=lwieske/java-8:jre-8u66-slim) | [bv7gf2fxaf6cw4kers77n89](https://hub.docker.com/r/lwieske/java-8/builds/bv7gf2fxaf6cw4kers77n89/) |
-| lwieske/java-8:server-jre-8u66 | [![](https://badge.imagelayers.io/lwieske/java-8:server-jre-8u66.svg)](https://imagelayers.io/?images=lwieske/java-8:server-jre-8u66) | [blrjwgbkvcpskmwjggf7ell](https://hub.docker.com/r/lwieske/java-8/builds/blrjwgbkvcpskmwjggf7ell) |
-| lwieske/java-8:server-jre-8u66-slim | [![](https://badge.imagelayers.io/lwieske/java-8:server-jre-8u66-slim.svg)](https://imagelayers.io/?images=lwieske/java-8:server-jre-8u66-slim) | [bynqn72x3gsxhud2d4xpmxn](https://hub.docker.com/r/lwieske/java-8/builds/bynqn72x3gsxhud2d4xpmxn/) |
+| lwieske/java-8:jdk-8u72 | [![](https://badge.imagelayers.io/lwieske/java-8:jdk-8u72.svg)](https://imagelayers.io/?images=lwieske/java-8:jdk-8u72) | [bhvnwcizr2ns6zvrjm2mwfr](https://hub.docker.com/r/lwieske/java-8/builds/bhvnwcizr2ns6zvrjm2mwfr/) |
+| lwieske/java-8:jdk-8u72-slim | [![](https://badge.imagelayers.io/lwieske/java-8:jdk-8u72-slim.svg)](https://imagelayers.io/?images=lwieske/java-8:jdk-8u72-slim) | [btutqkeuvnxvdvdsruau2ux](https://hub.docker.com/r/lwieske/java-8/builds/btutqkeuvnxvdvdsruau2ux/) |
+| lwieske/java-8:jre-8u72 | [![](https://badge.imagelayers.io/lwieske/java-8:jre-8u72.svg)](https://imagelayers.io/?images=lwieske/java-8:jre-8u72) | [bgg45nbtg3qnexgdtjtqej5](https://hub.docker.com/r/lwieske/java-8/builds/bgg45nbtg3qnexgdtjtqej5/) |
+| lwieske/java-8:jre-8u72-slim | [![](https://badge.imagelayers.io/lwieske/java-8:jre-8u72-slim.svg)](https://imagelayers.io/?images=lwieske/java-8:jre-8u72-slim) | [bv7gf2fxaf6cw4kers77n89](https://hub.docker.com/r/lwieske/java-8/builds/bv7gf2fxaf6cw4kers77n89/) |
+| lwieske/java-8:server-jre-8u72 | [![](https://badge.imagelayers.io/lwieske/java-8:server-jre-8u72.svg)](https://imagelayers.io/?images=lwieske/java-8:server-jre-8u72) | [blrjwgbkvcpskmwjggf7ell](https://hub.docker.com/r/lwieske/java-8/builds/blrjwgbkvcpskmwjggf7ell) |
+| lwieske/java-8:server-jre-8u72-slim | [![](https://badge.imagelayers.io/lwieske/java-8:server-jre-8u72-slim.svg)](https://imagelayers.io/?images=lwieske/java-8:server-jre-8u72-slim) | [bynqn72x3gsxhud2d4xpmxn](https://hub.docker.com/r/lwieske/java-8/builds/bynqn72x3gsxhud2d4xpmxn/) |
+
+#### 8u71
+
+| Image                     | Badge |
+| ------------------------- | ----- |
+| lwieske/java-8:jdk-8u71 | [![](https://badge.imagelayers.io/lwieske/java-8:jdk-8u71.svg)](https://imagelayers.io/?images=lwieske/java-8:jdk-8u71) |
+| lwieske/java-8:jdk-8u71-slim | [![](https://badge.imagelayers.io/lwieske/java-8:jdk-8u71-slim.svg)](https://imagelayers.io/?images=lwieske/java-8:jdk-8u71-slim) |
+| lwieske/java-8:jre-8u71 | [![](https://badge.imagelayers.io/lwieske/java-8:jre-8u71.svg)](https://imagelayers.io/?images=lwieske/java-8:jre-8u71) |
+| lwieske/java-8:jre-8u71-slim | [![](https://badge.imagelayers.io/lwieske/java-8:jre-8u71-slim.svg)](https://imagelayers.io/?images=lwieske/java-8:jre-8u71-slim) |
+| lwieske/java-8:server-jre-8u71 | [![](https://badge.imagelayers.io/lwieske/java-8:server-jre-8u71.svg)](https://imagelayers.io/?images=lwieske/java-8:server-jre-8u71) |
+| lwieske/java-8:server-jre-8u71-slim | [![](https://badge.imagelayers.io/lwieske/java-8:server-jre-8u71-slim.svg)](https://imagelayers.io/?images=lwieske/java-8:server-jre-8u71-slim) |
+
+#### 8u66
+
+| Image                     | Badge |
+| ------------------------- | ----- |
+| lwieske/java-8:jdk-8u66 | [![](https://badge.imagelayers.io/lwieske/java-8:jdk-8u66.svg)](https://imagelayers.io/?images=lwieske/java-8:jdk-8u66) |
+| lwieske/java-8:jdk-8u66-slim | [![](https://badge.imagelayers.io/lwieske/java-8:jdk-8u66-slim.svg)](https://imagelayers.io/?images=lwieske/java-8:jdk-8u66-slim) |
+| lwieske/java-8:jre-8u66 | [![](https://badge.imagelayers.io/lwieske/java-8:jre-8u66.svg)](https://imagelayers.io/?images=lwieske/java-8:jre-8u66) |
+| lwieske/java-8:jre-8u66-slim | [![](https://badge.imagelayers.io/lwieske/java-8:jre-8u66-slim.svg)](https://imagelayers.io/?images=lwieske/java-8:jre-8u66-slim) |
+| lwieske/java-8:server-jre-8u66 | [![](https://badge.imagelayers.io/lwieske/java-8:server-jre-8u66.svg)](https://imagelayers.io/?images=lwieske/java-8:server-jre-8u66) |
+| lwieske/java-8:server-jre-8u66-slim | [![](https://badge.imagelayers.io/lwieske/java-8:server-jre-8u66-slim.svg)](https://imagelayers.io/?images=lwieske/java-8:server-jre-8u66-slim) |
 
 #### 8u65
 
