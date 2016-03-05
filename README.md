@@ -4,9 +4,9 @@
 
 **Using the image, you accept the [Oracle Binary Code License Agreement](http://www.oracle.com/technetwork/java/javase/terms/license/index.html) for Java SE.**
 
-[![](https://img.shields.io/imagelayers/image-size/lwieske/java-8/jdk-8u73-slim.svg)]() lwieske/java-8:jdk-8u73-slim
+[![](https://img.shields.io/imagelayers/image-size/lwieske/java-8/jdk-8u74-slim.svg)]() lwieske/java-8:jdk-8u74-slim
 
-[![](https://img.shields.io/imagelayers/image-size/lwieske/java-8/server-jre-8u73-slim.svg)]() lwieske/java-8:server-jre-8u73-slim
+[![](https://img.shields.io/imagelayers/image-size/lwieske/java-8/server-jre-8u74-slim.svg)]() lwieske/java-8:server-jre-8u74-slim
 
 ```
 docker run -i -t lwieske/java-8 java -version
@@ -14,11 +14,22 @@ docker run -i -t lwieske/java-8 java -version
 
 ***
 
-#### 8u73
+#### 8u74
 
 | Image                     | Badge |
 | ------------------------- | ----- |
 | lwieske/java-8:latest | [![](https://img.shields.io/imagelayers/image-size/lwieske/java-8/latest.svg)](https://imagelayers.io/?images=lwieske/java-8:latest) |
+| lwieske/java-8:jdk-8u74 | [![](https://img.shields.io/imagelayers/image-size/lwieske/java-8/jdk-8u74.svg)]() |
+| lwieske/java-8:jdk-8u74-slim | [![](https://img.shields.io/imagelayers/image-size/lwieske/java-8/jdk-8u74-slim.svg)]() |
+| lwieske/java-8:jre-8u74 | [![](https://img.shields.io/imagelayers/image-size/lwieske/java-8/jre-8u74.svg)]() |
+| lwieske/java-8:jre-8u74-slim | [![](https://img.shields.io/imagelayers/image-size/lwieske/java-8/jre-8u74-slim.svg)]() |
+| lwieske/java-8:server-jre-8u74 | [![](https://img.shields.io/imagelayers/image-size/lwieske/java-8/server-jre-8u74.svg)]() |
+| lwieske/java-8:server-jre-8u74-slim | [![](https://img.shields.io/imagelayers/image-size/lwieske/java-8/server-jre-8u74-slim.svg)]() |
+
+#### 8u73
+
+| Image                     | Badge |
+| ------------------------- | ----- |
 | lwieske/java-8:jdk-8u73 | [![](https://img.shields.io/imagelayers/image-size/lwieske/java-8/jdk-8u73.svg)]() |
 | lwieske/java-8:jdk-8u73-slim | [![](https://img.shields.io/imagelayers/image-size/lwieske/java-8/jdk-8u73-slim.svg)]() |
 | lwieske/java-8:jre-8u73 | [![](https://img.shields.io/imagelayers/image-size/lwieske/java-8/jre-8u73.svg)]() |
@@ -30,7 +41,6 @@ docker run -i -t lwieske/java-8 java -version
 
 | Image                     | Badge |
 | ------------------------- | ----- |
-| lwieske/java-8:latest | [![](https://img.shields.io/imagelayers/image-size/lwieske/java-8/latest.svg)](https://imagelayers.io/?images=lwieske/java-8:latest) |
 | lwieske/java-8:jdk-8u72 | [![](https://img.shields.io/imagelayers/image-size/lwieske/java-8/jdk-8u72.svg)]() |
 | lwieske/java-8:jdk-8u72-slim | [![](https://img.shields.io/imagelayers/image-size/lwieske/java-8/jdk-8u72-slim.svg)]() |
 | lwieske/java-8:jre-8u72 | [![](https://img.shields.io/imagelayers/image-size/lwieske/java-8/jre-8u72.svg)]() |
@@ -183,4 +193,4 @@ docker run -i -t lwieske/java-8 java -version
 
 ### Automation
 
-The __generate.sh__ script may be used to generate folders and files (8u11-*).
+The __generate.sh__ script may be used to generate folders and files (8u11-* / sh -x scripts/generate.sh).
