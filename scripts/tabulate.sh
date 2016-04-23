@@ -19,6 +19,8 @@ versions=(
   "73"
   "74"
   "77"
+  "91"
+  "92"
 )
 
 length=${#versions[@]}

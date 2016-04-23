@@ -4,15 +4,37 @@
 
 **Using the image, you accept the [Oracle Binary Code License Agreement](http://www.oracle.com/technetwork/java/javase/terms/license/index.html) for Java SE.**
 
-[![](https://img.shields.io/badge/size-164MB-blue.svg)]() lwieske/java-8:jdk-8u77-slim
+[![](https://img.shields.io/badge/size-164MB-blue.svg)]() lwieske/java-8:jdk-8u92-slim
 
-[![](https://img.shields.io/badge/size-117MB-blue.svg)]() lwieske/java-8:server-jre-8u77-slim
+[![](https://img.shields.io/badge/size-117MB-blue.svg)]() lwieske/java-8:server-jre-8u92-slim
 
 ```
 docker run -i -t lwieske/java-8 java -version
 ```
 
 ***
+
+### 8u92
+
+| Image | Badge |
+| ----- | ----- |
+| lwieske/java-8:jdk-8u92 | [![](https://img.shields.io/badge/size-589MB-blue.svg)]() |
+| lwieske/java-8:jdk-8u92-slim | [![](https://img.shields.io/badge/size-164MB-blue.svg)]() |
+| lwieske/java-8:jre-8u92 | [![](https://img.shields.io/badge/size-428MB-blue.svg)]() |
+| lwieske/java-8:jre-8u92-slim | [![](https://img.shields.io/badge/size-118MB-blue.svg)]() |
+| lwieske/java-8:server-jre-8u92 | [![](https://img.shields.io/badge/size-408MB-blue.svg)]() |
+| lwieske/java-8:server-jre-8u92-slim | [![](https://img.shields.io/badge/size-117MB-blue.svg)]() |
+
+### 8u91
+
+| Image | Badge |
+| ----- | ----- |
+| lwieske/java-8:jdk-8u91 | [![](https://img.shields.io/badge/size-599MB-blue.svg)]() |
+| lwieske/java-8:jdk-8u91-slim | [![](https://img.shields.io/badge/size-164MB-blue.svg)]() |
+| lwieske/java-8:jre-8u91 | [![](https://img.shields.io/badge/size-437MB-blue.svg)]() |
+| lwieske/java-8:jre-8u91-slim | [![](https://img.shields.io/badge/size-118MB-blue.svg)]() |
+| lwieske/java-8:server-jre-8u91 | [![](https://img.shields.io/badge/size-408MB-blue.svg)]() |
+| lwieske/java-8:server-jre-8u91-slim | [![](https://img.shields.io/badge/size-117MB-blue.svg)]() |
 
 ### 8u77
 
