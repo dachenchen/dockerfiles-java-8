@@ -11,6 +11,6 @@ RUN yum update -y && \
     rm server-jre-8u25-linux-x64.tar.gz && \
     yum clean all
 
-ENV JAVA_HOME=/usr/java/default \
+ENV JAVA_HOME=/usr/java/jdk1.8.0_25/ \
     LANG=en_US.UTF-8 \
     LC_ALL=en_US.UTF-8
