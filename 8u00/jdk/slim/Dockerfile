@@ -7,7 +7,7 @@ RUN cd /tmp                                                              && \
     export GLIBC_VERSION="2.23-r3"                                  && \
     export JAVA_PACKAGE="jdk"                                    && \
     export JAVA_BUILD="132"                                        && \
-    export GLIBC_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases/download" && \
+    export GLIBC_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}" && \
     export GLIBC_APK="glibc-${GLIBC_VERSION}.apk"                        && \
     export GLIBC_BIN_APK="glibc-bin-${GLIBC_VERSION}.apk"                && \
     export JAVA_URL="http://download.oracle.com/otn-pub/java/jdk/8-b${JAVA_BUILD}" && \
@@ -17,7 +17,6 @@ RUN cd /tmp                                                              && \
     wget -q ${GLIBC_URL}/${GLIBC_BIN_APK}                                && \
     apk add --no-cache --allow-untrusted ${GLIBC_APK}                    && \
     apk add --no-cache --allow-untrusted ${GLIBC_BIN_APK}                && \
-    /usr/glibc/usr/bin/ldconfig /lib /usr/glibc/usr/lib                  && \
     echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf && \
     mkdir -p /usr/lib/jvm                                                && \
     wget -qO- --header "Cookie: oraclelicense=accept-securebackup-cookie;" ${JAVA_URL}/${JAVA_TGZ} | tar -xzf -  && \
