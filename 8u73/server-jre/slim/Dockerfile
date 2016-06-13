@@ -101,5 +101,5 @@ RUN cd /tmp                                                              && \
     ln -s $JAVA_HOME/bin/* /usr/bin/                                     && \
     rm -rf /tmp/*
 
-ENV JAVA_HOME=${JAVA_HOME} \
-    PATH=${PATH}:${JAVA_HOME}/bin
+ENV JAVA_HOME=/usr/lib/jvm/default-jvm \
+    PATH=${PATH}:/usr/lib/jvm/default-jvm/bin
