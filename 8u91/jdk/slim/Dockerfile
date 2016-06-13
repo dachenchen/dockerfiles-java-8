@@ -1,14 +1,14 @@
-FROM alpine:3.3
+FROM alpine
 
 MAINTAINER Lothar Wieske <lothar.wieske@gmail.com>
 
 RUN cd /tmp                                                              && \
     apk add --no-cache --virtual=build-dependencies ca-certificates wget && \
-    export GLIBC_VERSION="2.21-r2"                                  && \
+    export GLIBC_VERSION="2.23-r3"                                  && \
     export JAVA_PACKAGE="jdk"                                    && \
     export JAVA_UPDATE="91"                                      && \
     export JAVA_BUILD="14"                                        && \
-    export GLIBC_URL="https://circle-artifacts.com/gh/andyshinn/alpine-pkg-glibc/6/artifacts/0/home/ubuntu/alpine-pkg-glibc/packages/x86_64" && \
+    export GLIBC_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases/download" && \
     export GLIBC_APK="glibc-${GLIBC_VERSION}.apk"                        && \
     export GLIBC_BIN_APK="glibc-bin-${GLIBC_VERSION}.apk"                && \
     export JAVA_URL="http://download.oracle.com/otn-pub/java/jdk/8u${JAVA_UPDATE}-b${JAVA_BUILD}" && \

@@ -51,7 +51,7 @@ do
     sed -i '' -e s/UPDATE/${u}/g           8u${u}/${pkg}/Dockerfile
     sed -i '' -e s/BUILD/${b}/g            8u${u}/${pkg}/Dockerfile
     cat Dockerfile.slim                   >8u${u}/${pkg}/slim/Dockerfile
-    sed -i '' -e s/GLIBCVERSION/2.21-r2/g  8u${u}/${pkg}/slim/Dockerfile
+    sed -i '' -e s/GLIBCVERSION/2.23-r3/g  8u${u}/${pkg}/slim/Dockerfile
     sed -i '' -e s/JAVAPACKAGE/${pkg}/g    8u${u}/${pkg}/slim/Dockerfile
     sed -i '' -e s/JAVAUPDATE/${u}/g       8u${u}/${pkg}/slim/Dockerfile
     sed -i '' -e s/JAVABUILD/${b}/g        8u${u}/${pkg}/slim/Dockerfile
