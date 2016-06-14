@@ -8,6 +8,6 @@ RUN yum update -y && \
     rm jdk-8u5-linux-x64.rpm && \
     yum clean all
 
-ENV JAVA_HOME=/usr/java/jdk1.8.0_5/ \
+ENV JAVA_HOME=/usr/java/jdk1.8.0_05/ \
     LANG=en_US.UTF-8 \
     LC_ALL=en_US.UTF-8

@@ -51,7 +51,8 @@ for pkg in jdk jre server-jre
 do
   mkdir -p 8u05/${pkg}/slim
   cat Dockerfile.${pkg}                 >8u05/${pkg}/Dockerfile
-  sed -i '' -e s/JAVAUPDATE/5/g          8u05/${pkg}/Dockerfile
+  sed -i '' -e s/_JAVAUPDATE/_05/g       8u05/${pkg}/Dockerfile
+  sed -i '' -e s/uJAVAUPDATE/u5/g        8u05/${pkg}/Dockerfile
   sed -i '' -e s/JAVABUILD/13/g          8u05/${pkg}/Dockerfile
   cat Dockerfile.slim                   >8u05/${pkg}/slim/Dockerfile
   sed -i '' -e s/GLIBCVERSION/2.23-r3/g  8u05/${pkg}/slim/Dockerfile
