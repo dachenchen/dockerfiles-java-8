@@ -6,6 +6,7 @@ RUN cd /tmp                                                              && \
     apk add --no-cache --virtual=build-dependencies ca-certificates wget && \
     export GLIBC_VERSION="2.23-r3"                                  && \
     export JAVA_PACKAGE="jre"                                    && \
+    export JAVA_UPDATE=""                                      && \
     export JAVA_BUILD="132"                                        && \
     export GLIBC_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}" && \
     export GLIBC_APK="glibc-${GLIBC_VERSION}.apk"                        && \
@@ -99,5 +100,5 @@ RUN cd /tmp                                                              && \
     ln -s $JAVA_HOME/bin/* /usr/bin/                                     && \
     rm -rf /tmp/*
 
-ENV JAVA_HOME=/usr/lib/jvm/default-jvm \
+ENV JAVA_HOME=/usr/lib/jvm/default-jvm/ \
     PATH=${PATH}:/usr/lib/jvm/default-jvm/bin

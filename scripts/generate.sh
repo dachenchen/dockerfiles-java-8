@@ -3,6 +3,9 @@
 rm -rf jdk* jre* server-jre*
 
 # Full Version Strings
+# omitted as they complicate processing
+#   1.8.0-b132
+#   1.8.0_5-b13
 versions=(
   1.8.0_11-b12
   1.8.0_20-b26
@@ -23,8 +26,43 @@ versions=(
   1.8.0_92-b14
 )
 
-#updates=(    ""  "5" )
-#builds=(  "132" "13" )
+################################################################################
+# 8u00
+################################################################################
+for pkg in jdk jre server-jre
+do
+  mkdir -p 8u00/${pkg}/slim
+  cat Dockerfile.${pkg}                 >8u00/${pkg}/Dockerfile
+  sed -i '' -e s/_JAVAUPDATE//g          8u00/${pkg}/Dockerfile
+  sed -i '' -e s/uJAVAUPDATE//g          8u00/${pkg}/Dockerfile
+  sed -i '' -e s/JAVABUILD/132/g         8u00/${pkg}/Dockerfile
+  cat Dockerfile.slim                   >8u00/${pkg}/slim/Dockerfile
+  sed -i '' -e s/GLIBCVERSION/2.23-r3/g  8u00/${pkg}/slim/Dockerfile
+  sed -i '' -e s/JAVAPACKAGE/${pkg}/g    8u00/${pkg}/slim/Dockerfile
+  sed -i '' -e s/JAVAUPDATE//g           8u00/${pkg}/slim/Dockerfile
+  sed -i '' -e s/u\$\{JAVA_UPDATE\}//g   8u00/${pkg}/slim/Dockerfile
+  sed -i '' -e s/JAVABUILD/132/g         8u00/${pkg}/slim/Dockerfile
+done
+
+################################################################################
+# 8u05
+################################################################################
+for pkg in jdk jre server-jre
+do
+  mkdir -p 8u05/${pkg}/slim
+  cat Dockerfile.${pkg}                 >8u05/${pkg}/Dockerfile
+  sed -i '' -e s/JAVAUPDATE/5/g          8u05/${pkg}/Dockerfile
+  sed -i '' -e s/JAVABUILD/13/g          8u05/${pkg}/Dockerfile
+  cat Dockerfile.slim                   >8u05/${pkg}/slim/Dockerfile
+  sed -i '' -e s/GLIBCVERSION/2.23-r3/g  8u05/${pkg}/slim/Dockerfile
+  sed -i '' -e s/JAVAPACKAGE/${pkg}/g    8u05/${pkg}/slim/Dockerfile
+  sed -i '' -e s/JAVAUPDATE/5/g          8u05/${pkg}/slim/Dockerfile
+  sed -i '' -e s/JAVABUILD/13/g          8u05/${pkg}/slim/Dockerfile
+done
+
+################################################################################
+# 8u11...
+################################################################################
 
 updates=( )
 builds=( )
@@ -48,8 +86,8 @@ do
   do
     mkdir -p 8u${u}/${pkg}/slim
     cat Dockerfile.${pkg}                 >8u${u}/${pkg}/Dockerfile
-    sed -i '' -e s/UPDATE/${u}/g           8u${u}/${pkg}/Dockerfile
-    sed -i '' -e s/BUILD/${b}/g            8u${u}/${pkg}/Dockerfile
+    sed -i '' -e s/JAVAUPDATE/${u}/g       8u${u}/${pkg}/Dockerfile
+    sed -i '' -e s/JAVABUILD/${b}/g        8u${u}/${pkg}/Dockerfile
     cat Dockerfile.slim                   >8u${u}/${pkg}/slim/Dockerfile
     sed -i '' -e s/GLIBCVERSION/2.23-r3/g  8u${u}/${pkg}/slim/Dockerfile
     sed -i '' -e s/JAVAPACKAGE/${pkg}/g    8u${u}/${pkg}/slim/Dockerfile
