@@ -24,6 +24,8 @@ versions=(
   1.8.0_77-b03
   1.8.0_91-b14
   1.8.0_92-b14
+  1.8.0_101-b13
+  1.8.0_102-b14
 )
 
 ################################################################################
@@ -72,9 +74,20 @@ length=${#versions[@]}
 
 for (( i=0; i<${length}; i++ ));
 do
-  updates[$i]=${versions[$i]:6:2}
-  builds[$i]=${versions[$i]:10:2}
+    version=versions[$i]
+    if [ ${#version} == 11 ]
+    then
+        updates[$i]=${version:6:2}
+        builds[$i]=${version:10:2}
+    else
+        updates[$i]=${version:6:3}
+        builds[$i]=${version:11:2}
+    fi
 done
+
+echo $updates
+
+exit
 
 length=${#updates[@]}
 
