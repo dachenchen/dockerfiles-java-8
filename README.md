@@ -2,6 +2,8 @@
 
 **Dockerfiles** for [Oracle Java 8](http://www.oracle.com/technetwork/java/index.html) on [Alpine](https://registry.hub.docker.com/_/alpine/) and [Centos](https://registry.hub.docker.com/_/centos/) for Docker Automated/Trusted Builds.
 
+[![](https://images.microbadger.com/badges/image/lwieske/java-8.svg)](https://microbadger.com/images/lwieske/java-8 "Get your own image badge on microbadger.com")
+
 **Using the image, you accept the [Oracle Binary Code License Agreement](http://www.oracle.com/technetwork/java/javase/terms/license/index.html) for Java SE.**
 
 [![](https://img.shields.io/badge/size-164MB-blue.svg)]() lwieske/java-8:jdk-8u102-slim
