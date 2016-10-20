@@ -26,6 +26,14 @@ versions=(
   "112"
 )
 
+docker pull lwieske/java-8:latest > /dev/null 2>&1
+echo "***>" lwieske/java-8:latest "<***"
+docker run -i -t lwieske/java-8:latest more /etc/os-release | grep PRETTY_NAME
+docker run -i -t lwieske/java-8:latest java -version | grep version
+docker run -i -t lwieske/java-8:latest printenv JAVA_HOME
+docker rmi "lwieske/java-8:latest"  > /dev/null 2>&1
+echo ""
+
 length=${#versions[@]}
 
 for (( i=0; i<${length}; i++ ));
