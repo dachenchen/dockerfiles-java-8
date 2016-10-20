@@ -1,4 +1,6 @@
-## Dockerfiles for Oracle Java 8 [![Docker Hub](https://img.shields.io/docker/pulls/lwieske/java-8.svg?style=flat)](https://registry.hub.docker.com/u/lwieske/java-8/) [![Docker Hub](https://img.shields.io/docker/stars/lwieske/java-8.svg?style=flat)](https://registry.hub.docker.com/u/lwieske/java-8/)
+## Dockerfiles for Oracle Java 8 / 8u00 - 8u112
+
+[![Docker Hub](https://img.shields.io/docker/pulls/lwieske/java-8.svg?style=flat)](https://registry.hub.docker.com/u/lwieske/java-8/) [![Docker Hub](https://img.shields.io/docker/stars/lwieske/java-8.svg?style=flat)](https://registry.hub.docker.com/u/lwieske/java-8/)
 
 **Dockerfiles** for [Oracle Java 8](http://www.oracle.com/technetwork/java/index.html) on [Alpine](https://registry.hub.docker.com/_/alpine/) and [Centos](https://registry.hub.docker.com/_/centos/) for Docker Automated/Trusted Builds.
 
@@ -6,9 +8,9 @@
 
 **Using the image, you accept the [Oracle Binary Code License Agreement](http://www.oracle.com/technetwork/java/javase/terms/license/index.html) for Java SE.**
 
-[![](https://img.shields.io/badge/size-164MB-blue.svg)]() lwieske/java-8:jdk-8u102-slim
+[![](https://img.shields.io/badge/size-164MB-blue.svg)]() lwieske/java-8:jdk-8u112-slim
 
-[![](https://img.shields.io/badge/size-117MB-blue.svg)]() lwieske/java-8:server-jre-8u102-slim
+[![](https://img.shields.io/badge/size-117MB-blue.svg)]() lwieske/java-8:server-jre-8u112-slim
 
 ```
 docker run -i -t lwieske/java-8 java -version
@@ -16,14 +18,25 @@ docker run -i -t lwieske/java-8 java -version
 
 ***
 
-### Image Size Comparision
-
-| Image | Size / Layers | Stars | Pulls |
+| Image | Badge |
 | ----- | ----- |
-| lwieske/java-8 | [![](https://images.microbadger.com/badges/image/lwieske/java-8.svg)](https://microbadger.com/images/lwieske/java-8) | [![Docker Hub](https://img.shields.io/docker/stars/lwieske/java-8.svg?style=flat)](https://registry.hub.docker.com/u/lwieske/java-8/) | [![Docker Hub](https://img.shields.io/docker/pulls/lwieske/java-8.svg?style=flat)](https://registry.hub.docker.com/u/lwieske/java-8/) |
-| frolvlad/alpine-oraclejdk8 | [![](https://images.microbadger.com/badges/image/frolvlad/alpine-oraclejdk8.svg)](https://microbadger.com/images/frolvlad/alpine-oraclejdk8) | [![Docker Hub](https://img.shields.io/docker/stars/frolvlad/alpine-oraclejdk8.svg?style=flat)](https://registry.hub.docker.com/u/frolvlad/alpine-oraclejdk8/) | [![Docker Hub](https://img.shields.io/docker/pulls/frolvlad/alpine-oraclejdk8.svg?style=flat)](https://registry.hub.docker.com/u/frolvlad/alpine-oraclejdk8/) |
-| airdock/oracle-jdk | [![](https://images.microbadger.com/badges/image/airdock/oracle-jdk.svg)](https://microbadger.com/images/anapsix/airdock/oracle-jdk) | [![Docker Hub](https://img.shields.io/docker/stars/airdock/oracle-jdk.svg?style=flat)](https://registry.hub.docker.com/u/airdock/oracle-jdk/) | [![Docker Hub](https://img.shields.io/docker/pulls/airdock/oracle-jdk.svg?style=flat)](https://registry.hub.docker.com/u/airdock/oracle-jdk/) |
-| frekele/java | [![](https://images.microbadger.com/badges/image/frekele/java.svg)](https://microbadger.com/images/frekele/java) | [![Docker Hub](https://img.shields.io/docker/stars/frekele/java.svg?style=flat)](https://registry.hub.docker.com/u/frekele/java/) | [![Docker Hub](https://img.shields.io/docker/pulls/frekele/java.svg?style=flat)](https://registry.hub.docker.com/u/frekele/java/) |
+| lwieske/java-8:jdk-8u112 | [![](https://img.shields.io/badge/size-616MB-blue.svg)]() |
+| lwieske/java-8:jdk-8u112-slim | [![](https://img.shields.io/badge/size-164MB-blue.svg)]() |
+| lwieske/java-8:jre-8u112 | [![](https://img.shields.io/badge/size-454MB-blue.svg)]() |
+| lwieske/java-8:jre-8u112-slim | [![](https://img.shields.io/badge/size-118MB-blue.svg)]() |
+| lwieske/java-8:server-jre-8u112 | [![](https://img.shields.io/badge/size-430MB-blue.svg)]() |
+| lwieske/java-8:server-jre-8u112-slim | [![](https://img.shields.io/badge/size-117MB-blue.svg)]() |
+
+### 8u111
+
+| Image | Badge |
+| ----- | ----- |
+| lwieske/java-8:jdk-8u111 | [![](https://img.shields.io/badge/size-611MB-blue.svg)]() |
+| lwieske/java-8:jdk-8u111-slim | [![](https://img.shields.io/badge/size-164MB-blue.svg)]() |
+| lwieske/java-8:jre-8u111 | [![](https://img.shields.io/badge/size-450MB-blue.svg)]() |
+| lwieske/java-8:jre-8u111-slim | [![](https://img.shields.io/badge/size-118MB-blue.svg)]() |
+| lwieske/java-8:server-jre-8u111 | [![](https://img.shields.io/badge/size-430MB-blue.svg)]() |
+| lwieske/java-8:server-jre-8u111-slim | [![](https://img.shields.io/badge/size-117MB-blue.svg)]() |
 
 ### 8u102
 
