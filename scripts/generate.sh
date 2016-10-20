@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/usr/bin/env
 rm -rf jdk* jre* server-jre*
 
 # Full Version Strings
@@ -26,6 +25,8 @@ versions=(
   1.8.0_92-b14
   1.8.0_101-b13
   1.8.0_102-b14
+  1.8.0_111-b14
+  1.8.0_112-b15
 )
 
 ################################################################################
@@ -74,8 +75,9 @@ length=${#versions[@]}
 
 for (( i=0; i<${length}; i++ ));
 do
-    version=versions[$i]
-    if [ ${#version} == 11 ]
+    version=${versions[$i]}
+    echo "${version}"
+    if [ ${#version} == 12 ]
     then
         updates[$i]=${version:6:2}
         builds[$i]=${version:10:2}
@@ -83,13 +85,8 @@ do
         updates[$i]=${version:6:3}
         builds[$i]=${version:11:2}
     fi
+    echo ${updates[$i]} " / " ${builds[$i]}
 done
-
-echo $updates
-
-exit
-
-length=${#updates[@]}
 
 for (( i=1; i<${length}+1; i++ ));
 do
