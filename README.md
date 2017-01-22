@@ -1,4 +1,4 @@
-## Dockerfiles for Oracle Java 8 / 8u00 - 8u112
+## Dockerfiles for Oracle Java 8 / 8u00 - 8u121
 
 [![Docker Hub](https://img.shields.io/docker/pulls/lwieske/java-8.svg?style=flat)](https://registry.hub.docker.com/u/lwieske/java-8/) [![Docker Hub](https://img.shields.io/docker/stars/lwieske/java-8.svg?style=flat)](https://registry.hub.docker.com/u/lwieske/java-8/)
 
@@ -17,6 +17,19 @@ docker run -i -t lwieske/java-8 java -version
 ```
 
 ***
+
+### 8u121
+
+| Image | Badge |
+| ----- | ----- |
+| lwieske/java-8:jdk-8u121 | [![](https://img.shields.io/badge/size-556MB-blue.svg)]() |
+| lwieske/java-8:jdk-8u121-slim | [![](https://img.shields.io/badge/size-164MB-blue.svg)]() |
+| lwieske/java-8:jre-8u121 | [![](https://img.shields.io/badge/size-395MB-blue.svg)]() |
+| lwieske/java-8:jre-8u121-slim | [![](https://img.shields.io/badge/size-117MB-blue.svg)]() |
+| lwieske/java-8:server-jre-8u121 | [![](https://img.shields.io/badge/size-365MB-blue.svg)]() |
+| lwieske/java-8:server-jre-8u121-slim | [![](https://img.shields.io/badge/size-117MB-blue.svg)]() |
+
+### 8u112
 
 | Image | Badge |
 | ----- | ----- |
