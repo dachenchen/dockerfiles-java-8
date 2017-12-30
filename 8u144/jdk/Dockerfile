@@ -3,7 +3,7 @@ FROM centos
 MAINTAINER Lothar Wieske <lothar.wieske@gmail.com>
 
 RUN yum update -y && \
-    curl --insecure --junk-session-cookies --location --remote-name --silent --header "Cookie: oraclelicense=accept-securebackup-cookie" https://archive.org/download/jdk-8u144-linux-x64/jdk-8u144-linux-x64.rpm && \
+    curl --insecure --junk-session-cookies --location --remote-name --silent --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u144-b01/090f390dda5b47b9b721c7dfaa008135/jdk-8u144-linux-x64.rpm && \
     yum localinstall -y jdk-8u144-linux-x64.rpm && \
     rm jdk-8u144-linux-x64.rpm && \
     yum clean all
