@@ -3,7 +3,7 @@ FROM centos
 MAINTAINER Lothar Wieske <lothar.wieske@gmail.com>
 
 RUN yum update -y && \
-    curl --insecure --junk-session-cookies --location --remote-name --silent --header "Cookie: oraclelicense=accept-securebackup-cookie" https://archive.org/download/server-jre-8u144-linux-x64.tar/server-jre-8u144-linux-x64.tar.gz  && \
+    curl --insecure --junk-session-cookies --location --remote-name --silent --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u144-b01/090f390dda5b47b9b721c7dfaa008135/server-jre-8u144-linux-x64.tar.gz  && \
     mkdir -p /usr/java && \
     gunzip server-jre-8u144-linux-x64.tar.gz && \
     tar xf server-jre-8u144-linux-x64.tar -C /usr/java && \

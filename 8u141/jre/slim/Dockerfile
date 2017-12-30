@@ -5,10 +5,10 @@ MAINTAINER Lothar Wieske <lothar.wieske@gmail.com>
 RUN cd /tmp                                                              && \
     apk add --no-cache --virtual=build-dependencies ca-certificates wget && \
     export GLIBC_VERSION="2.26-r0"                                  && \
-    export JAVA_PACKAGE="server-jre"                                    && \
-    export JAVA_UPDATE="144"                                      && \
-    export JAVA_BUILD="01"                                        && \
-    export JAVA_DOWNLOAD_PREFIX="/090f390dda5b47b9b721c7dfaa008135"                     && \
+    export JAVA_PACKAGE="jre"                                    && \
+    export JAVA_UPDATE="141"                                      && \
+    export JAVA_BUILD="15"                                        && \
+    export JAVA_DOWNLOAD_PREFIX="/336fa29ff2bb4ef291e347e091f7f4a7"                     && \
     export GLIBC_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}" && \
     export GLIBC_APK="glibc-${GLIBC_VERSION}.apk"                        && \
     export GLIBC_BIN_APK="glibc-bin-${GLIBC_VERSION}.apk"                && \
