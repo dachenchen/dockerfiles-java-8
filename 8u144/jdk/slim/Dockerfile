@@ -4,14 +4,15 @@ MAINTAINER Lothar Wieske <lothar.wieske@gmail.com>
 
 RUN cd /tmp                                                              && \
     apk add --no-cache --virtual=build-dependencies ca-certificates wget && \
-    export GLIBC_VERSION="2.23-r3"                                  && \
+    export GLIBC_VERSION="2.26-r0"                                  && \
     export JAVA_PACKAGE="jdk"                                    && \
     export JAVA_UPDATE="144"                                      && \
     export JAVA_BUILD="01"                                        && \
+    export JAVA_DOWNLOAD_PREFIX="/090f390dda5b47b9b721c7dfaa008135"                     && \
     export GLIBC_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}" && \
     export GLIBC_APK="glibc-${GLIBC_VERSION}.apk"                        && \
     export GLIBC_BIN_APK="glibc-bin-${GLIBC_VERSION}.apk"                && \
-    export JAVA_URL="http://download.oracle.com/otn-pub/java/jdk/8u${JAVA_UPDATE}-b${JAVA_BUILD}/090f390dda5b47b9b721c7dfaa008135" && \
+    export JAVA_URL="https://archive.org/download/jdk-8u144-linux-x64.tar/" && \
     export JAVA_TGZ="${JAVA_PACKAGE}-8u${JAVA_UPDATE}-linux-x64.tar.gz"  && \
     export JAVA_HOME="/usr/lib/jvm/default-jvm"                          && \
     wget -q ${GLIBC_URL}/${GLIBC_APK}                                    && \
