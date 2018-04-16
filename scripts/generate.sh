@@ -29,8 +29,10 @@ versions=(
   # 1.8.0_131-b11-d54c1d3a095b4ff2b6607d096fa80163
   # 1.8.0_141-b15-336fa29ff2bb4ef291e347e091f7f4a7
   # 1.8.0_144-b01-090f390dda5b47b9b721c7dfaa008135
-  1.8.0_151-b12-e758a0de34e24606bca991d704f6dcbf
-  1.8.0_152-b16-aa0333dd3019491ca4f6ddbe78cdb6d0
+  # 1.8.0_151-b12-e758a0de34e24606bca991d704f6dcbf
+  # 1.8.0_152-b16-aa0333dd3019491ca4f6ddbe78cdb6d0
+  1.8.0_161-b12-2f38c3b165be4555a1fa6e98c45e0808
+  1.8.0_162-b12-0da788060d494f5095bf8624735fa2f1
 )
 
 ################################################################################
@@ -81,6 +83,7 @@ length=${#versions[@]}
 for (( i=0; i<${length}; i++ ));
 do
     version=${versions[$i]}
+    echo ${#version}
     if [ ${#version} == 12 ]
     then
         updates[$i]=${version:6:2}
@@ -107,6 +110,8 @@ do
     fi
 done
 
+echo ${prefixes}
+
 for (( i=1; i<${length}+1; i++ ));
 do
   u=${updates[$i-1]}
@@ -119,8 +124,7 @@ do
     cat Dockerfile.${pkg}                         >8u${u}/${pkg}/Dockerfile
     sed -i '' -e s/JAVAUPDATE/${u}/g               8u${u}/${pkg}/Dockerfile
     sed -i '' -e s/JAVABUILD/${b}/g                8u${u}/${pkg}/Dockerfile
-    if [ ${p} == "" ]
-    then
+    if [ -z ${p} ]; then
         sed -i '' -e s,JAVADOWNLOADPREFIX,,g       8u${u}/${pkg}/Dockerfile
     else
         sed -i '' -e s,JAVADOWNLOADPREFIX,${p}/,g  8u${u}/${pkg}/Dockerfile
