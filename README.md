@@ -1,4 +1,4 @@
-## Dockerfiles for Oracle Java 8 / 8u00 - 8u152
+## Dockerfiles for Oracle Java 8 / 8u00 - 8u162
 
 [![Docker Hub](https://img.shields.io/docker/pulls/lwieske/java-8.svg?style=flat)](https://registry.hub.docker.com/u/lwieske/java-8/) [![Docker Hub](https://img.shields.io/docker/stars/lwieske/java-8.svg?style=flat)](https://registry.hub.docker.com/u/lwieske/java-8/)
 
@@ -8,15 +8,37 @@
 
 **Using the image, you accept the [Oracle Binary Code License Agreement](http://www.oracle.com/technetwork/java/javase/terms/license/index.html) for Java SE.**
 
-[![](https://img.shields.io/badge/size-164MB-blue.svg)]() lwieske/java-8:jdk-8u152-slim
+[![](https://img.shields.io/badge/size-164MB-blue.svg)]() lwieske/java-8:jdk-8u162-slim
 
-[![](https://img.shields.io/badge/size-117MB-blue.svg)]() lwieske/java-8:server-jre-8u152-slim
+[![](https://img.shields.io/badge/size-117MB-blue.svg)]() lwieske/java-8:server-jre-8u162-slim
 
 ```
 docker run -i -t lwieske/java-8 java -version
 ```
 
 ***
+
+### 8u162
+
+| Image | Badge |
+| ----- | ----- |
+| lwieske/java-8:jdk-8u162 | [![](https://img.shields.io/badge/size-577MB-blue.svg)]() |
+| lwieske/java-8:jdk-8u162-slim | [![](https://img.shields.io/badge/size-164MB-blue.svg)]() |
+| lwieske/java-8:jre-8u162 | [![](https://img.shields.io/badge/size-415MB-blue.svg)]() |
+| lwieske/java-8:jre-8u162-slim | [![](https://img.shields.io/badge/size-118MB-blue.svg)]() |
+| lwieske/java-8:server-jre-8u162 | [![](https://img.shields.io/badge/size-352MB-blue.svg)]() |
+| lwieske/java-8:server-jre-8u162-slim | [![](https://img.shields.io/badge/size-117MB-blue.svg)]() |
+
+### 8u161
+
+| Image | Badge |
+| ----- | ----- |
+| lwieske/java-8:jdk-8u161 | [![](https://img.shields.io/badge/size-577MB-blue.svg)]() |
+| lwieske/java-8:jdk-8u161-slim | [![](https://img.shields.io/badge/size-164MB-blue.svg)]() |
+| lwieske/java-8:jre-8u161 | [![](https://img.shields.io/badge/size-415MB-blue.svg)]() |
+| lwieske/java-8:jre-8u161-slim | [![](https://img.shields.io/badge/size-118MB-blue.svg)]() |
+| lwieske/java-8:server-jre-8u161 | [![](https://img.shields.io/badge/size-352MB-blue.svg)]() |
+| lwieske/java-8:server-jre-8u161-slim | [![](https://img.shields.io/badge/size-117MB-blue.svg)]() |
 
 ### 8u152
 
