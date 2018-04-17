@@ -30,6 +30,10 @@ versions=(
   "144"
   "151"
   "152"
+  "161"
+  "162"
+  "171"
+  "172"
 )
 
 docker pull lwieske/java-8:latest > /dev/null 2>&1

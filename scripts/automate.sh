@@ -179,4 +179,60 @@ curl --header "Content-Type: application/json" --data '{"docker_tag": "jre-8u131
 curl --header "Content-Type: application/json" --data '{"docker_tag": "server-jre-8u131"}'      --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
 curl --header "Content-Type: application/json" --data '{"docker_tag": "server-jre-8u131-slim"}' --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
 
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jdk-8u141"}'             --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jre-8u141"}'             --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jdk-8u141-slim"}'        --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jre-8u141-slim"}'        --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "server-jre-8u141"}'      --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "server-jre-8u141-slim"}' --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jdk-8u144"}'             --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jre-8u144"}'             --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jdk-8u144-slim"}'        --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jre-8u144-slim"}'        --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "server-jre-8u144"}'      --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "server-jre-8u144-slim"}' --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jdk-8u151"}'             --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jre-8u151"}'             --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jdk-8u151-slim"}'        --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jre-8u151-slim"}'        --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "server-jre-8u151"}'      --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "server-jre-8u151-slim"}' --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jdk-8u152"}'             --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jre-8u152"}'             --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jdk-8u152-slim"}'        --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jre-8u152-slim"}'        --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "server-jre-8u152"}'      --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "server-jre-8u152-slim"}' --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jdk-8u161"}'             --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jre-8u161"}'             --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jdk-8u161-slim"}'        --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jre-8u161-slim"}'        --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "server-jre-8u161"}'      --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "server-jre-8u161-slim"}' --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jdk-8u162"}'             --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jre-8u162"}'             --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jdk-8u162-slim"}'        --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jre-8u162-slim"}'        --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "server-jre-8u162"}'      --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "server-jre-8u162-slim"}' --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jdk-8u171"}'             --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jre-8u171"}'             --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jdk-8u171-slim"}'        --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jre-8u171-slim"}'        --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "server-jre-8u171"}'      --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "server-jre-8u171-slim"}' --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jdk-8u172"}'             --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jre-8u172"}'             --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jdk-8u172-slim"}'        --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "jre-8u172-slim"}'        --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "server-jre-8u172"}'      --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+curl --header "Content-Type: application/json" --data '{"docker_tag": "server-jre-8u172-slim"}' --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
+
 curl --header "Content-Type: application/json" --data '{"docker_tag": "latest"}'               --request POST $TRIGGER_URL ; sleep $THROTTLE_SECONDS
