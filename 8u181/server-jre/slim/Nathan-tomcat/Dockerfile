@@ -24,4 +24,4 @@ RUN apk upgrade --update && \
 
 
 EXPOSE 8080
-CMD ["catalina.sh", "run"]
+CMD ["/opt/tomcat/bin/catalina.sh", "run"]
