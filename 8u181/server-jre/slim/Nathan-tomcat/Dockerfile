@@ -19,8 +19,8 @@ RUN apk upgrade --update && \
     apk del curl && \
     rm -rf /tmp/* /var/cache/apk/*
 
-# COPY logging.properties ${TOMCAT_HOME}/conf/logging.properties
-# COPY server.xml ${TOMCAT_HOME}/conf/server.xml
+COPY logging.properties ${TOMCAT_HOME}/conf/logging.properties
+COPY server.xml ${TOMCAT_HOME}/conf/server.xml
 
 
 EXPOSE 8080
