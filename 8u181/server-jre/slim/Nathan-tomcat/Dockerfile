@@ -5,8 +5,9 @@ ENV TZ=Asia/Shanghai \
     TOMCAT_MAJOR=8 \
     TOMCAT_VERSION=8.5.3 \
     TOMCAT_HOME=/opt/tomcat \
-    CATALINA_HOME=/opt/tomcat \
-    CATALINA_OUT=/dev/null
+    CATALINA_HOME=/opt/tomcat 
+    # CATALINA_OUT=/dev/null
+RUN mkdir /opt
 
 RUN apk upgrade --update && \
     apk add --update curl && \
