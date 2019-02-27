@@ -127,7 +127,9 @@ RUN set -eux; \
 # fix permissions (especially for running as non-root)
 # https://github.com/docker-library/tomcat/issues/35
 	chmod -R +rX .; \
-	chmod 777 logs work
+	chmod 777 logs work \
+# 删了无用文件，帮阿里云省点空间
+	rm -rf $CATALINA_HOME/webapps/*
 
 # verify Tomcat Native is working properly
 RUN set -e \
