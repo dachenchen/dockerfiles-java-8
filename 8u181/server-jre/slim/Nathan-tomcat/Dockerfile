@@ -1,8 +1,9 @@
-FROM lwieske/java-8:server-jre-8u181-slim
+FROM lwieske/java-8:server-jre-8u191-slim
 
 ENV TZ=Asia/Shanghai \
     LANG=C.UTF-8    \
-	JAVA_VERSION=8u181	\
+	JAVA_VERSION=8u191	\
+	JAVA_ALPINE_VERSION=8.191.12-r0 \
     CATALINA_HOME=/usr/local/tomcat \
     PATH=$CATALINA_HOME/bin:$PATH
     
