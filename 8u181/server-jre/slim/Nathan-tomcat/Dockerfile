@@ -1,12 +1,14 @@
 FROM lwieske/java-8:jdk-8u191-slim
 
-ENV TZ=Asia/Shanghai \
-    LANG=C.UTF-8    \
-	JAVA_VERSION=8u191	\
-	JAVA_ALPINE_VERSION=8.191.12-r0 \
-    CATALINA_HOME=/usr/local/tomcat \
-    PATH=$CATALINA_HOME/bin:$PATH
-    
+ENV TZ Asia/Shanghai
+ENV LANG C.UTF-8
+ENV JAVA_VERSION 8u191  
+ENV JAVA_ALPINE_VERSION 8.191.12-r0
+ENV JAVA_HOME /usr/lib/jvm/default-jvm/
+ENV PATH ${PATH}:/usr/lib/jvm/default-jvm/bin
+ENV CATALINA_HOME /usr/local/tomcat
+ENV PATH $CATALINA_HOME/bin:$PATH
+
 RUN mkdir -p "$CATALINA_HOME"
 WORKDIR $CATALINA_HOME
 
@@ -87,7 +89,7 @@ RUN set -eux; \
 		gcc \
 		libc-dev \
 		make \
-		# "openjdk${JAVA_VERSION%%[-~bu]*}"="$JAVA_ALPINE_VERSION" \
+		"openjdk${JAVA_VERSION%%[-~bu]*}"="$JAVA_ALPINE_VERSION" \
 		openssl-dev \
 	; \
 	( \
@@ -127,9 +129,8 @@ RUN set -eux; \
 	chmod 777 logs work
 
 # verify Tomcat Native is working properly
-
-RUN set -e; \
-	nativeLines="$(catalina.sh configtest 2>&1)" \
+RUN set -e \
+	&& nativeLines="$(catalina.sh configtest 2>&1)" \
 	&& nativeLines="$(echo "$nativeLines" | grep 'Apache Tomcat Native')" \
 	&& nativeLines="$(echo "$nativeLines" | sort -u)" \
 	&& if ! echo "$nativeLines" | grep 'INFO: Loaded APR based Apache Tomcat Native library' >&2; then \
