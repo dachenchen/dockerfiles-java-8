@@ -87,8 +87,8 @@ RUN set -eux; \
 		gcc \
 		libc-dev \
 		make \
-		"oraclejdk${JAVA_VERSION%%[-~bu]*}"="$JAVA_ALPINE_VERSION" \
-		openssl-dev \
+		# "openjdk${JAVA_VERSION%%[-~bu]*}"="$JAVA_ALPINE_VERSION" \
+		# openssl-dev \
 	; \
 	( \
 		export CATALINA_HOME="$PWD"; \
@@ -99,8 +99,8 @@ RUN set -eux; \
 			--libdir="$TOMCAT_NATIVE_LIBDIR" \
 			--prefix="$CATALINA_HOME" \
 			--with-apr="$(which apr-1-config)" \
-			--with-java-home="$(docker-java-home)" \
-			--with-ssl=yes; \
+			--with-java-home="$JAVA_HOME" \
+			--with-ssl=no; \
 		make -j "$(nproc)"; \
 		make install; \
 	); \
