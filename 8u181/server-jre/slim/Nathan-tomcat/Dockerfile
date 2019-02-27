@@ -127,8 +127,8 @@ RUN set -eux; \
 	chmod 777 logs work
 
 # verify Tomcat Native is working properly
-WORKDIR ${CATALINA_HOME}/bin
-RUN set -e \
+
+RUN set -e; \
 	&& nativeLines="$(catalina.sh configtest 2>&1)" \
 	&& nativeLines="$(echo "$nativeLines" | grep 'Apache Tomcat Native')" \
 	&& nativeLines="$(echo "$nativeLines" | sort -u)" \
