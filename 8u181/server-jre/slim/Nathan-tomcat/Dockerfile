@@ -1,4 +1,4 @@
-FROM lwieske/java-8:server-jre-8u191-slim
+FROM lwieske/java-8:jdk-8u191-slim
 
 ENV TZ=Asia/Shanghai \
     LANG=C.UTF-8    \
