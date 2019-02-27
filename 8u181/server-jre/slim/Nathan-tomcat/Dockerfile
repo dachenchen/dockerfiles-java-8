@@ -88,7 +88,7 @@ RUN set -eux; \
 		libc-dev \
 		make \
 		# "openjdk${JAVA_VERSION%%[-~bu]*}"="$JAVA_ALPINE_VERSION" \
-		# openssl-dev \
+		openssl-dev \
 	; \
 	( \
 		export CATALINA_HOME="$PWD"; \
@@ -100,7 +100,7 @@ RUN set -eux; \
 			--prefix="$CATALINA_HOME" \
 			--with-apr="$(which apr-1-config)" \
 			--with-java-home="$JAVA_HOME" \
-			--with-ssl=no; \
+			--with-ssl=yes; \
 		make -j "$(nproc)"; \
 		make install; \
 	); \
