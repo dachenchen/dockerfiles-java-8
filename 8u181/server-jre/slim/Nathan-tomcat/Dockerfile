@@ -2,6 +2,7 @@ FROM lwieske/java-8:server-jre-8u181-slim
 
 ENV TZ=Asia/Shanghai \
     LANG=C.UTF-8    \
+	JAVA_VERSION=8u181	\
     CATALINA_HOME=/usr/local/tomcat \
     PATH=$CATALINA_HOME/bin:$PATH
     
